@@ -8,6 +8,8 @@ namespace BulkyBookWeb.Models
     {
         [Key]
         public int Id { get; set; } = 0;
+        public DateTime JoinDateTime { get; set; } = DateTime.Now;
+
         [StringLength(30), Required]
         public string Username { get; set; } = string.Empty;
         [StringLength(30), Required]
