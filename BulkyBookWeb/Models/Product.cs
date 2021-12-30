@@ -10,19 +10,19 @@ namespace BulkyBookWeb.Models
         [Key]
         public int Id { get; set; } = 0;
 
-        [StringLength(30), Required]
+        [MaxLength(10),MinLength(10), Required]
         public string BookNbr { get; set; } = string.Empty;
 
-        [StringLength(30), Required]
+        [StringLength(100), Required]
         public string Title { get; set; } = string.Empty;
 
         [StringLength(60), Required]
         public string Author { get; set; } = string.Empty;
 
-        [Column(TypeName = "decimal(11,2)"), Required]
+        [Column(TypeName = "decimal(9,2)"), Required]
         public decimal Price { get; set; } = decimal.Zero;
 
-        [MaxLength(5), Required]
+        [MaxLength(7), Required]
         public int Unit { get; set; } = 1;
 
         [StringLength(30)]

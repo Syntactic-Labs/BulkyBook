@@ -7,7 +7,9 @@ namespace BulkyBookWeb.Models
     {
         [Key]
         public int Id { get; set; } = 0;
+        [Required,MaxLength(9)]
         public int Quantity { get; set; } = 1;
+        
         public int PurchaseId { get; set; } = 0;
         public int ProductId { get; set; } = 0;
         [JsonIgnore]

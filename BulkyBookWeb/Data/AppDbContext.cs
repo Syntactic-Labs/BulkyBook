@@ -13,6 +13,6 @@ namespace BulkyBookWeb.Data
         public DbSet<Vendor> Vendors { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Purchase> Purchases { get; set; }
-        public DbSet<Purchaseline> PurchasesLines { get; set; }
+        public DbSet<Purchaseline> PurchaseLines { get; set; }
     }
 }
