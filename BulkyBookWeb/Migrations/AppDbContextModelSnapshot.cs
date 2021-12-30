@@ -72,7 +72,7 @@ namespace BulkyBookWeb.Migrations
                     b.HasIndex("Username")
                         .IsUnique();
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("BulkyBookWeb.Models.Vendor", b =>
@@ -126,7 +126,7 @@ namespace BulkyBookWeb.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("Vendors");
+                    b.ToTable("Vendors", (string)null);
                 });
 #pragma warning restore 612, 618
         }
