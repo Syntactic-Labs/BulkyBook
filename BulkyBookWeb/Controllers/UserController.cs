@@ -16,5 +16,16 @@ namespace BulkyBookWeb.Controllers
             IEnumerable<User> objUserList = _db.Users;
             return View(objUserList);
         }
+        public async Task<ActionResult<User>> Detail(int id)
+        {
+            var user = await _db.Users.FindAsync(id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return View(user);
+        }
     }
 }
